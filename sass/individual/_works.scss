@@ -1,0 +1,558 @@
+@use "../_setting" as s;
+
+#wrapper .worksSingle{
+	&__priceBox{
+		width:100%;
+		position:relative;
+		margin-bottom:2em;
+		@include s.media(m){
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			padding-right:20em;
+			justify-content:right;
+			margin-top:3em;
+			margin-bottom:5em;
+		}
+		@include s.media(xl){
+			padding-right:25em;
+		}
+		&__price{
+			position:relative;
+			display:inline-block;
+		}
+		dl{
+			margin-bottom:1em;
+			@include s.media(m){
+				margin-bottom:0;
+			}
+		}
+		dt{
+			color:#000;
+			margin-bottom:1em;
+			@include s.media(m){
+				margin-bottom:0;
+				font-size:1.2em;
+			}
+			@include s.media(xl){
+				font-size:1.4em;
+			}
+		}
+		dd{
+			color:#000;
+			line-height:1.2;
+			font-family: 'Fjalla One', sans-serif;
+			letter-spacing: 0.1em;
+			position:relative;
+			display:flex;
+			justify-content:left;
+			align-items:center;
+			padding-right:6em;
+			@include s.media(m){
+				justify-content:center;
+				align-items:center;
+				font-size:1.6em;
+				padding-right:0;
+			}
+			@include s.media(xl){
+				font-size:1.8em;
+			}
+			b{
+				font-size:2.5em;
+				color:s.$colorType05;
+				margin-left:0.2em;
+				@include s.media(m){
+					font-size:2em;
+				}
+				@include s.media(xl){
+					font-size:2.2em;
+				}
+			}
+		}
+	}
+	&__priceDown{
+		width:4.6em;
+		height:4.6em;
+		background:s.$colorType05;
+		border-radius:50%;
+		padding-top:0.8em;
+		color:#FFF;
+		font-size:1.2em;
+		font-weight:bold;
+		line-height:1.1;
+		display:block;
+		text-align:center;
+		position:absolute;
+		top:0;
+		right:0;
+		transform:rotate(10deg);
+		font-family: 'Fjalla One', sans-serif;
+		@include s.media(m){
+			width:4.8em;
+			height:4.8em;
+			font-size:1.5em;
+			position:absolute;
+			top:-1em;
+			right:8em;
+		}
+		@include s.media(xl){
+			position:absolute;
+			top:-1em;
+			right:10em;
+		}
+		b{
+			font-size:1.8em;
+		}
+		span{
+			display:block;
+		}
+	}
+	&__beforeBox{
+		display:block;
+		border:#00297b solid 3px;
+		position:relative;
+		margin-bottom:3em;
+		@include s.media(m){
+			border:#00297b solid 5px;
+		}
+		img{
+			width:100%;
+		}
+		figure{
+			figcaption{
+				opacity: 1;
+    			background:none;
+    			font-size: 1em;
+				padding: auto;
+				display:inline-block;
+				position:absolute;
+				top:-1em;
+				left:2em;
+				@include s.media(m){
+					position:absolute;
+					top:-1.5em;
+					left:4em;
+				}
+				span{
+					color:#FFF;
+					font-size:1.25em;
+					padding:0 1.5em 0 0.5em;
+					position:relative;
+					z-index:1;
+					margin-bottom:0.5em;
+					display:inline-block;
+					margin-top:0.1em;
+					@include s.media(m){
+						max-width:101%;
+						font-size:1.8em;
+						padding:0 1em 0 0;
+						margin-top:4px;
+					}
+					&::before{
+						z-index:-1;
+						content:" ";
+						width:110%;
+						height:2em;
+						display:block;
+						position:absolute;
+						top:-0.2em;
+						left:-0.7em;
+						background: #004ea2;
+						transform: skewX(-25deg);
+					}
+				}
+			}
+		}
+	}
+	&__afterBox{
+		display:block;
+		border:#00297b solid 3px;
+		position:relative;
+		margin-bottom:1.5em;
+		@include s.media(m){
+			border:#00297b solid 5px;
+			margin-bottom:3em;
+		}
+		img{
+			width:100%;
+		}
+		figure{
+			figcaption{
+				opacity: 1;
+    			background:none;
+    			font-size: 1em;
+				padding: auto;
+				display:inline-block;
+				position:absolute;
+				top:-1em;
+				left:2em;
+				@include s.media(m){
+					position:absolute;
+					top:-1.5em;
+					left:4em;
+				}
+				span{
+					color:s.$colorType03;
+					font-size:1.25em;
+					padding:0 1.5em 0 0.5em;
+					position:relative;
+					z-index:1;
+					margin-bottom:0.5em;
+					display:inline-block;
+					margin-top:0.1em;
+					@include s.media(m){
+						max-width:101%;
+						font-size:1.8em;
+						padding:0 1.5em 0 0.5em;
+						margin-top:4px;
+					}
+					&::before{
+						z-index:-1;
+						content:" ";
+						width:110%;
+						height:2em;
+						display:block;
+						position:absolute;
+						top:-0.2em;
+						left:-0.7em;
+						background: #004ea2;
+						transform: skewX(-25deg);
+					}
+				}
+			}
+		}
+	}
+	&__infoBox{
+		display:block;
+		background:#edf4f9;
+		padding:2em 1.5em 1.5em 1.5em;
+		margin-bottom:3em;
+		@include s.media(m){
+			padding:2em 2em 1.5emem 2em;
+		}
+		dl{
+			display:block;
+			border-bottom:#FFF solid 1px;
+			padding:0 0 0.5em;
+			margin-bottom:0.5em;
+			dt{
+				font-weight:bold;
+				font-size:1.1em;
+				display:block;
+				@include s.media(m){
+					font-size:1.2em;
+					width:20%;
+					float:left;
+					text-align:right;
+					padding-right:1em;
+				}
+				@include s.media(xl){
+					width:30%;
+					padding-right:2em;
+				}
+			}
+			dd{
+				display:block;
+				font-size:1.1em;
+				@include s.media(m){
+					width:80%;
+					font-size:1.2em;
+					float:right;
+				}
+				@include s.media(xl){
+					width:70%;
+					padding-right:5em;
+				}
+			}
+		}
+	}
+}
+
+.col-sm-6 + .col-sm-6 .worksSingle__afterBox{
+	position:relative;
+	&::before{
+		content:" ";
+		display:block;
+		width:5em;
+		height:5em;
+		background:url(../img/common/imgArrow.png) no-repeat center top;
+		background-size:100% auto;
+		position:absolute;
+		top:-5em;
+		left:50%;
+		margin-left:-2.5em;
+		transform:rotate(90deg);
+		@include s.media(m){
+			width:7em;
+			height:7em;
+			position:absolute;
+			top:50%;
+			left:-4em;
+			margin-top:-3.5em;
+			margin-left:0;
+			transform:none;
+		}
+	}
+}
+
+.worksNaviBox{
+	background:#f6f6f6;
+	padding:1em;
+	margin-bottom:1.5em;
+	display:block;
+	position:relative;
+	&__allButton{
+		margin-bottom:0.5em;
+		@include s.media(m){
+			margin-bottom:0;
+		}
+		a{
+			padding:0.5em 1em;
+			background:#FFF;
+			border-radius:0.1em;
+			@include s.media(m){
+				width:4em;
+				text-align:center;
+				font-size:0.9em;
+				background:#e3e2e2;
+				display:block;
+				position:absolute;
+				top:50%;
+				left:1em;
+				margin-top:-1.4em;
+			}
+		}
+		span{
+			@include s.media(m){
+				display:none;
+			}
+		}
+	}
+	ul{
+		@include s.media(m){
+			padding-left:5em;
+			width:100%;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+		a{
+			padding:0.5em 1em 0.5em 2.5em;
+			background:#FFF;
+			border-radius:0.1em;
+			position:relative;
+			display:block;
+			@include s.media(m){
+				margin:0 0.5em;
+				display:inline-block;
+			}
+			&:before{
+			    content: "\f138";
+			    font-family: 'icomoon';
+			    color:#CCC;
+			    position:absolute;
+			    top:0.6em;
+			    left:1em;
+				@include s.media(m){
+				    position:absolute;
+				    top:0.4em;
+				    left:1em;
+				}
+			}
+		}
+	}
+}
+
+.term-case_myself .worksNaviBox ul li:nth-child(1) a{
+	background:#003658;
+	color:#FFF;
+	pointer-events: none;
+}
+
+.term-case_rebuiltparts .worksNaviBox ul li:nth-child(2) a{
+	background:#003658;
+	color:#FFF;
+	pointer-events: none;
+}
+
+.term-case_replacement .worksNaviBox ul li:nth-child(3) a{
+	background:#003658;
+	color:#FFF;
+	pointer-events: none;
+}
+
+.worksListBox{
+	a{
+		background:#FFF;
+		display:block;
+		position:relative;
+		&::after{
+			content:" ";
+			display:block;
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:0;
+			left:0;
+			border:#00297b solid 3px;
+			-webkit-transition: all .2s ease;
+			transition: all .2s ease;
+		}
+		&:hover{
+			background:#fcebaf;
+			&::after{
+				border:#00297b solid 6px;
+			}
+		}
+	}
+	&__pageTitle{
+		font-size:1em;
+		font-weight:bold;
+		color:#FFF;
+		text-align:center;
+		display:block;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		background:#00297b;
+		padding:0.7em 0.5em;
+		line-height:1.4;
+		@include s.media(m){
+			//min-height:4.2em;
+			font-size:1.3em;
+		}
+	}
+	&__exampleTitle{
+		display:block;
+		position:absolute;
+		top:0;
+		left:0;
+		display:inline-block;
+		background:rgba(#00297b ,.8);
+		padding:0.3em 0.8em;
+		color:#FFF;
+		font-size:0.8em;
+		@include s.media(m){
+			font-size:1em;
+			padding:0.3em 1em;
+		}
+	}
+	&__image{
+		height:8em;
+		max-height:8em;
+		overflow:hidden;
+		position:relative;
+		@include s.media(m){
+			height:12em;
+			max-height:12em;
+		}
+		@include s.media(xl){
+			height:14em;
+			max-height:14em;
+		}
+		img{
+			width:100%;
+		}
+	}
+	&__exampleContent{
+		display:block;
+		padding:0.5em 1em;
+		position:relative;
+		@include s.media(m){
+			padding:1.5em;
+		}
+	}
+	&__price{
+		margin-bottom:1em;
+		display:block;
+		dt{
+			color:#006bb6;
+			color:#000;
+			margin-bottom:0.5em;
+			font-size:0.7em;
+			line-height:1.4em;
+			@include s.media(xl){
+				font-size:1.1em;
+			}
+		}
+		dd{
+			color:#000;
+			line-height:1.2;
+			font-family: 'Fjalla One', sans-serif;
+			letter-spacing: 0.1em;
+			@include s.media(xl){
+				font-size:1.1em;
+			}
+			b{
+				font-size:2em;
+				color:s.$colorType05;
+				display:block;
+				@include s.media(m){
+					font-size:2.5em;
+				}
+				@include s.media(xl){
+					font-size:2.7em;
+				}
+			}
+		}
+	}
+	&__priceDown{
+		width:4.3em;
+		height:4.3em;
+		background:s.$colorType05;
+		border-radius:50%;
+		padding-top:0.8em;
+		color:#FFF;
+		font-size:0.9em;
+		font-weight:bold;
+		line-height:1.1;
+		display:block;
+		text-align:center;
+		position:absolute;
+		top:-3.6em;
+		right:-0.6em;
+		transform:rotate(10deg);
+		font-family: 'Fjalla One', sans-serif;
+		z-index:1;
+		@include s.media(m){
+			width:4.6em;
+			height:4.6em;
+			font-size:1.2em;
+			position:absolute;
+			top:2.5em;
+			right:1em;
+		}
+		@include s.media(xl){
+			width:4.8em;
+			height:4.8em;
+			font-size:1.5em;
+			position:absolute;
+			top:1.5em;
+			right:0.5em;
+		}
+		b{
+			font-size:1.7em;
+			@include s.media(m){
+				font-size:1.8em;
+			}
+		}
+		span{
+			display:block;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

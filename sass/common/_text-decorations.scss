@@ -1,0 +1,104 @@
+@use "../_setting" as s;
+
+body {
+	background: s.$colorType01;
+	color: #333;
+}
+
+.clearfix{
+	a{
+		text-decoration:none;
+		color: #000;
+		&:hover{
+			text-decoration:none;
+			color: #DDD;
+		}
+	}
+	p a:hover{
+		text-decoration:underline;
+	}
+}
+
+a.over {  
+	-webkit-transition: 0.3s ease-in-out;  
+    -moz-transition: 0.3s ease-in-out;  
+    -o-transition: 0.3s ease-in-out;  
+    transition: 0.3s ease-in-out;  
+	&:hover{
+		 filter: alpha(opacity=50);
+		 -moz-opacity: 0.5;
+		 opacity: 0.5;
+	}
+}
+
+.color{
+	&--type01{
+		color:red;
+	}
+	&--type02{
+		color:s.$colorType01;
+	}
+}
+
+.bg{
+	&--type01{
+		background:red;
+	}
+	&--type02{
+		background:s.$colorType01;
+	}
+}
+
+h2.contentsHeadline{
+	background:#00297b;
+	color:#FFF;
+	display:block;
+	font-size:1.6em;
+	padding:0.7em 0.5em 0.7em 1.5em;
+	position:relative;
+	margin-bottom:0.7em;
+	@include s.media(m){
+		font-size:1.4em;
+	}
+	&:before{
+		content:" ";
+		width:0.5em;
+		height:2px;
+		position:absolute;
+		top:1.5em;
+		left:0;
+		margin-top:-1px;
+		background:s.$colorType03;
+		display:block;
+	}
+}
+
+h3.contentsHeadline{
+	color:#000;
+	display:block;
+	font-size:1.4em;
+	padding:0.5em 1em 0.5em 1em;
+	margin-bottom:0.9em;
+	border:#00297b solid 2px;
+	@include s.media(m){
+		font-size:1.2em;
+	}
+}
+
+h4.contentsHeadline{
+	background:#e1e9ef;
+	color:#000;
+	display:block;
+	font-size:1.1em;
+	padding:0.7em 0.5em 0.7em 2.5em;
+	margin-bottom:1.3em;
+	position:relative;
+	&:before{
+	    content: "\f138";
+	    font-family: 'icomoon';
+	    position:absolute;
+	    top:1em;
+	    left:1em;
+	}
+}
+

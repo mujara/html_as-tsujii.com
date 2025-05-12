@@ -1,0 +1,182 @@
+@use "../_setting" as s;
+
+#footer {
+	background:#f8f7f1;
+	display:block;
+	clear: both;
+	padding-top:3em;
+	@include s.media(m){
+		padding-top:0;
+	}
+}
+
+
+.footer__information {
+	text-align:center;
+
+	&__siteTitle{
+		padding:0 15% 1em 15%;
+		@include s.media(m){
+			padding:0 20% 1em 20%;
+		}
+	}
+	&__siteTitle img{
+		width:100%;
+	}
+	&__tel {
+		font-size:2em;
+		color:#68b0b5;
+		@include s.media(m){
+			font-size:1.5em;
+		}
+	}
+	&__sent {
+	font-size:0.8em;
+		@include s.media(m){
+			font-size:0.8em;
+		}
+	}
+}
+
+
+.footer__navi {
+	width:100%;
+	border-bottom:#999999 dotted 1px;
+	display:none;
+	margin:2em 0;
+	@include s.media(m){
+		display:block;
+		text-align:center;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		border-bottom:none;
+		margin:5em 0;
+	}
+	li{
+		padding:5px 0;
+		border-top:#999999 dotted 1px;
+		@include s.media(m){
+			padding:0 1em;
+			border:none;
+		}
+		a{
+			font-size:0.9em;
+			color:#53526C;
+			text-decoration:none;
+			@include s.media(m){
+					font-size:1em;
+			}
+			@include s.media(xl){
+					font-size:1.1em;
+			}
+			&:before {
+				content:"\03e  ";
+				@include s.media(m){
+					content:none;
+				}
+			}
+			&:hover {
+				color: #458dba;
+			}
+		}
+	}
+}
+
+.footer__infBox{
+	display:block;
+	clear:both;
+}
+
+.footer__info{
+	display:block;
+	@include s.media(m){
+		width:30%;
+		float:left;
+	}
+	@include s.media(xl){
+		width:27%;
+	}
+	img{
+		width:100%;
+	}
+}
+
+.footer__description{
+	background:s.$colorType02;
+	margin-bottom:0.8em;
+	text-align:center;
+	color:#FFF;
+	font-size:0.8em;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	@include s.media(m){
+		width:100%;
+		margin-top:0.5em;
+		font-size:0.9em;
+	}
+}
+
+.footer__siteTitle{
+	margin-bottom:s.$spaceSize;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	@include s.media(m){
+		width:100%;
+		margin-bottom:s.$spaceSize*3;
+	}
+}
+
+.footer__tel{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	display:none;
+	margin-bottom:s.$spaceSize;
+	@include s.media(m){
+		margin-left:0;
+		margin-right:0;
+		display:block;
+	}
+}
+
+.footer__sent{
+	text-align:center;
+	@include s.media(m){
+		text-align:left;
+	}
+	span{
+		@include s.media(m){
+			display:none;
+		}
+	}
+}
+
+.footer__sentTel{
+	color:#dd2933;
+	display:block;
+	font-size:1.24em;
+}
+
+.footer__map{
+	display:none;
+	margin-bottom:s.$spaceSize*2;
+	@include s.media(m){
+		width:64%;
+		float:right;
+		display:block;
+	}
+}
+
+
+
+
+
+
+
+
+
